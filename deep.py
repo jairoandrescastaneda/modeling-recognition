@@ -73,7 +73,7 @@ def loadModel():
 def entrenamientoData():
     #datos basicos y red neuronal
     
-    NUMBER_EPOCHS = 1000
+    NUMBER_EPOCHS = 10000
     LEARNING_RATE = 1e-2
     lossFunction = nn.CrossEntropyLoss()
     optimizer = optim.SGD(redNeuronal.parameters(),lr=LEARNING_RATE)
@@ -138,8 +138,8 @@ def testeoData():
  
     
 
-loadModel()
-#entrenamientoData()
+#loadModel()
+entrenamientoData()
 testeoData()
-#saveModel()
+saveModel()
 
