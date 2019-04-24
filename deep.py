@@ -1,5 +1,4 @@
-#import pdb
-#pdb.set_trace()
+#!/usr/bin/env python3
 import torch
 from torch.autograd import Variable
 import numpy as np
@@ -73,7 +72,7 @@ def loadModel():
 def entrenamientoData():
     #datos basicos y red neuronal
     
-    NUMBER_EPOCHS = 10000
+    NUMBER_EPOCHS = 1000000
     LEARNING_RATE = 1e-2
     lossFunction = nn.CrossEntropyLoss()
     optimizer = optim.SGD(redNeuronal.parameters(),lr=LEARNING_RATE)
